@@ -1,0 +1,17 @@
+local owners = {
+  923076, -- B0_0PS
+  2331484141, -- GetGian
+}
+function loadlol()
+	for _,Player in pairs(game:GetService('Players'):GetChildren()) do
+		if table.find(owners, Player.UserId) then
+			if Player.Character then
+				if Player.Character.Parent.Name == 'Players' then
+					Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. Player.DisplayName)--owner emoji
+				end
+			end
+		end
+	end
+end
+local success,err = pcall(loadlol)
+return admins
